@@ -1,0 +1,7 @@
+ytd-guide-entry-renderer:has( a[title="Shorts"] ) {
+    display: none;
+}
+
+ytd-rich-section-renderer:has( ytd-rich-shelf-renderer[is-shorts]) {
+    display:none;
+}

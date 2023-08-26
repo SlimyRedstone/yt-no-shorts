@@ -1,0 +1,30 @@
+{
+	"name": "Youtube No Shorts",
+	"version": "1.0.0",
+	"description": "Youtube No Shorts",
+	"manifest_version": 3,
+	"author": "SlimyRedstone",
+	"permissions": ["tabs", "activeTab", "declarativeContent", "storage", "scripting"],
+	"background": {
+		"service_worker": "bg.js"
+	},
+	"action": {},
+	"content_scripts": [
+		{
+			"css": ["./noshorts.css"],
+			"js": ["./noshorts.js"],
+			"matches": ["https://*.youtube.com/","https://*.youtube.com/*","https://*.youtube.com/*/*"],
+			"run_at": "document_start"
+		}
+	],
+	"web_accessible_resources": [
+		{
+			"resources": ["yt-no-shorts.js"],
+			"matches": ["https://*/*"]
+		}
+	],
+	"host_permissions": ["https://*.youtube.com/*", "https://*.youtube.com/results*"],
+
+	"cross_origin_embedder_policy": { "value": "require-corp" },
+	"cross_origin_opener_policy": { "value": "same-origin" }
+}
