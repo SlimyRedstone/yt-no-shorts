@@ -1,7 +1,12 @@
-ytd-guide-entry-renderer:has( a[title="Shorts"] ) {
-    display: none;
+ytd-guide-entry-renderer:has( a[title="Shorts"] ){
+    display:none !important;
 }
-
+ytd-reel-shelf-renderer.style-scope.ytd-item-section-renderer{
+    display:none !important;
+}
 ytd-rich-section-renderer:has( ytd-rich-shelf-renderer[is-shorts]) {
-    display:none;
+    display:none !important;
+}
+ytd-video-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style="SHORTS"]) {
+    display: none !important;
 }

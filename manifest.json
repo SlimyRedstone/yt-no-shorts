@@ -1,10 +1,10 @@
 {
 	"name": "Youtube No Shorts",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Youtube No Shorts",
 	"manifest_version": 3,
 	"author": "SlimyRedstone",
-	"permissions": ["tabs", "activeTab", "declarativeContent", "storage", "scripting"],
+	"permissions": ["scripting"],
 	"background": {
 		"service_worker": "bg.js"
 	},
