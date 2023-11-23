@@ -1,4 +1,5 @@
-ytd-guide-entry-renderer:has( a[title="Shorts"] ){
+ytd-guide-entry-renderer:has( a[title="Shorts"] ),
+ytd-mini-guide-entry-renderer:has( a[title="Shorts"] ){
     display:none !important;
 }
 ytd-reel-shelf-renderer.style-scope.ytd-item-section-renderer{
