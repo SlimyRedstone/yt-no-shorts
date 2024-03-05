@@ -1,13 +1,31 @@
-ytd-guide-entry-renderer:has( a[title="Shorts"] ),
-ytd-mini-guide-entry-renderer:has( a[title="Shorts"] ){
-    display:none !important;
+ytd-guide-entry-renderer:has(a#endpoint[title='Shorts']),
+ytd-guide-entry-renderer:has(a#endpoint[title='Your movies & TV']),
+ytd-guide-entry-renderer:has(a#endpoint[title='Your clips']),
+ytd-mini-guide-entry-renderer:has(a[title='Shorts']) {
+	display: none !important;
 }
-ytd-reel-shelf-renderer.style-scope.ytd-item-section-renderer{
-    display:none !important;
+ytd-reel-shelf-renderer.style-scope.ytd-item-section-renderer {
+	display: none !important;
 }
-ytd-rich-section-renderer:has( ytd-rich-shelf-renderer[is-shorts]) {
-    display:none !important;
+ytd-rich-section-renderer:has(ytd-rich-shelf-renderer[is-shorts]) {
+	display: none !important;
 }
-ytd-video-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style="SHORTS"]) {
+ytd-video-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style='SHORTS']) {
+	display: none !important;
+}
+
+/*
+###header > .ytd-rich-grid-renderer.style-scope
+*/
+
+div#header.style-scope.ytd-rich-grid-renderer:has(ytd-feed-filter-chip-bar-renderer) {
+	display: none !important;
+}
+
+/* 
+##ytd-guide-section-renderer.ytd-guide-renderer.style-scope:nth-of-type(3)
+*/
+ytd-guide-section-renderer.style-scope.ytd-guide-renderer:nth-child(3) ,
+ytd-guide-section-renderer.style-scope.ytd-guide-renderer:nth-child(4) {
     display: none !important;
 }
